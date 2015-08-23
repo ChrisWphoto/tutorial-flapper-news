@@ -1,0 +1,49 @@
+img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  position: relative;
+
+}
+
+img:hover{
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: .5s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   { width:30px; height:30px; bottom: 0px;}
+
+    50%  { width:35px; height:35px; bottom: 5px;}
+
+    100% { width:30px; height:30px; bottom: 0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   { width:30px; height:30px; bottom: 0px;}
+
+  50%  { width:35px; height:35px; bottom: 5px;}
+
+  100% { width:30px; height:30px; bottom: 0px;}
+}
+}
+
+
+
+.img-upvote:hover{
+  background:#000;
+  color:#EEE;
+}
+
+body {
+  margin: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}

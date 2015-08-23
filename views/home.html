@@ -1,0 +1,27 @@
+<div class="page-header">
+<h1>Flapper News</h1>
+</div>
+
+<div ng-repeat="post in posts | orderBy: '-upvotes'">
+  <span class="img-upvote"> <img src="img/piggie.png" ng-click="upvote(post)">
+    <a ng-show="post.link" href="{{post.link}}">
+  {{post.title}}
+</a>
+<span ng-hide="post.link">
+  {{post.title}}
+</span>
+- upvotes: {{post.upvotes}}
+</div>
+
+<form ng-submit="addPost(title, link)" style="margin-top:30px;">
+  <h3>Add a New Post</h3>
+  <div class="form-group">
+  <input type="text" ng-model="title"></input>
+</div>
+  <br>
+  <div class="form-group">
+  <input type="text"  placeholder="link" ng-model="link"></input>
+</div>
+  <br>
+  <button type="submit" class="btn btn-primary">Post</button>
+</form>
